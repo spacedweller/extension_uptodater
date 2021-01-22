@@ -1,0 +1,25 @@
+{
+    "name":"Auto-uptodater 2",
+    "version":"1.0", 
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["*://*.google.com/search?*"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Auto-uptodater"
+    },
+    "background": {
+        "scripts": ["moment.min.js", "background.js"],
+        "persistent": false
+      },
+    "permissions": [
+        "storage",
+        "tabs"
+    ]
+    
+    
+}
